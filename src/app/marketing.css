@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 231 48% 48%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 90%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 122 47% 34%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 231 48% 48%;
+    --radius: 0.5rem;
+
+    --marketing-secondary-bg: 0 0% 96.1%;
+    --marketing-secondary-fg: 222.2 84% 4.9%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 224.3 76.3% 48.2%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 154 54.8% 45.1%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 224.3 76.3% 48.2%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .bg-marketing-secondary {
+    background-color: hsl(var(--marketing-secondary-bg));
+    color: hsl(var(--marketing-secondary-fg));
+  }
+  .bg-marketing-secondary .text-muted-foreground {
+    color: hsl(var(--muted-foreground));
+  }
+  .dark .bg-marketing-secondary .text-muted-foreground {
+    color: hsl(0 0% 45.1%);
+  }
+  
+  .gradient-bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    background: transparent;
+  }
+  
+  .gradients-container {
+      filter: blur(40px);
+      width: 100%;
+      height: 100%;
+  }
+
+  .g1, .g2, .g3, .g4, .g5 {
+      position: absolute;
+      border-radius: 100%;
+      mix-blend-mode: screen;
+      z-index: 0;
+  }
+
+  .g1 {
+      background: radial-gradient(circle at center, rgba(100, 80, 255, 0.8) 0, rgba(100, 80, 255, 0) 50%) no-repeat;
+      width: 30vw;
+      height: 30vw;
+      top: 5%;
+      left: 10%;
+      animation: move-g1 15s infinite;
+  }
+
+  .g2 {
+      background: radial-gradient(circle at center, rgba(80, 255, 120, 0.8) 0, rgba(80, 255, 120, 0) 50%) no-repeat;
+      width: 35vw;
+      height: 35vw;
+      top: 20%;
+      left: 40%;
+      animation: move-g2 17s infinite;
+  }
+  
+  .g3 {
+      background: radial-gradient(circle at center, rgba(255, 80, 150, 0.8) 0, rgba(255, 80, 150, 0) 50%) no-repeat;
+      width: 25vw;
+      height: 25vw;
+      bottom: 10%;
+      right: 15%;
+      animation: move-g3 16s infinite;
+  }
+  
+  .g4 {
+      background: radial-gradient(circle at center, rgba(255, 200, 80, 0.8) 0, rgba(255, 200, 80, 0) 50%) no-repeat;
+      width: 20vw;
+      height: 20vw;
+      bottom: 5%;
+      left: 5%;
+      animation: move-g4 18s infinite;
+  }
+
+  .g5 {
+      background: radial-gradient(circle at center, rgba(80, 180, 255, 0.8) 0, rgba(80, 180, 255, 0) 50%) no-repeat;
+      width: 40vw;
+      height: 40vw;
+      top: -10%;
+      right: -5%;
+      animation: move-g5 14s infinite;
+  }
+
+  @keyframes move-g1 {
+      0%, 100% { transform: translate(0, 0); }
+      25% { transform: translate(10vw, 15vh); }
+      50% { transform: translate(-5vw, 5vh); }
+      75% { transform: translate(5vw, -10vh); }
+  }
+
+  @keyframes move-g2 {
+      0%, 100% { transform: translate(0, 0); }
+      25% { transform: translate(-15vw, 10vh); }
+      50% { transform: translate(10vw, -5vh); }
+      75% { transform: translate(-5vw, -15vh); }
+  }
+
+  @keyframes move-g3 {
+      0%, 100% { transform: translate(0, 0); }
+      25% { transform: translate(5vw, -10vh); }
+      50% { transform: translate(-10vw, 15vh); }
+      75% { transform: translate(15vw, 5vh); }
+  }
+
+  @keyframes move-g4 {
+      0%, 100% { transform: translate(0, 0); }
+      25% { transform: translate(15vw, 5vh); }
+      50% { transform: translate(-5vw, -15vh); }
+      75% { transform: translate(5vw, 10vh); }
+  }
+
+  @keyframes move-g5 {
+      0%, 100% { transform: translate(0, 0); }
+      25% { transform: translate(-10vw, -10vh); }
+      50% { transform: translate(15vw, 10vh); }
+      75% { transform: translate(-5vw, 5vh); }
+  }
+}

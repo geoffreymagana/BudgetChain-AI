@@ -65,6 +65,10 @@ export default {
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))',
         },
+        'marketing-secondary': {
+          DEFAULT: 'hsl(var(--marketing-secondary-bg))',
+          foreground: 'hsl(var(--marketing-secondary-fg))',
+        }
       },
       borderRadius: {
         lg: 'var(--radius)',

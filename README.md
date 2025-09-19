@@ -2,7 +2,23 @@
 
 BudgetChain AI is an advanced, AI-powered cryptocurrency portfolio tracker designed to provide a seamless and unified experience for managing digital assets across multiple blockchains. It aggregates data from various wallets (like Ethereum, Solana, and Polygon) into a single, intuitive dashboard. Leveraging the power of Google's Gemini models via Genkit, it offers personalized insights, detailed reports, and actionable recommendations to help users optimize their portfolios.
 
-![BudgetChain AI Dashboard](https://storage.googleapis.com/lovable-public-assets/apps/budgetchain-ai.png)
+BudgetChain AI Dashboard
+![BudgetChain AI Dashboard](public/images/screenshots/image.png)
+
+Portfolio Allocation
+![Portfolio Allocation](public/images/screenshots/image-1.png)
+
+Connecting a Wallet
+![Connecting a Wallet](public/images/screenshots/image-2.png)
+
+Monthly Report
+![Monthly Report](public/images/screenshots/image-3.png)
+![Monthly Report](public/images/screenshots/image-4.png)
+
+Main Site
+![Main Site](public/images/screenshots/image-5.png)
+
+
 
 ## ✨ Key Features
 
@@ -36,8 +52,8 @@ Follow these instructions to set up and run the project on your local machine.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/budgetchain-ai.git
-cd budgetchain-ai
+git clone https://github.com/geoffreymagana/BudgetChain-AI.git
+cd BudgetChain-AI
 ```
 
 ### 2. Install Dependencies

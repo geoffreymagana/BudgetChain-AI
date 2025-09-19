@@ -15,6 +15,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel,
 import Image from 'next/image';
 import { User } from 'lucide-react';
 import { usePathname } from 'next/navigation';
+import './../dashboard.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
